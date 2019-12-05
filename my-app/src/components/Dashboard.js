@@ -19,10 +19,10 @@ export default function Dashboard (props) {
 
 return (
     <Buttons>
-        <Button className="button" onClick={props.hit}>Hit</Button>
-        <Button className="button" onClick={props.strike}>Strike</Button>
-        <Button className="button" onClick={props.ball}>Ball</Button>
-        <Button className="button" onClick={props.foul}>Foul</Button>
+       <Button className="button" data-testid="hit-display" onClick={props.hit}>Hit</Button>
+        <Button className="button" data-testid="strike-display" onClick={props.strike}>Strike</Button>
+        <Button className="button" data-testid="ball-display" onClick={props.ball}>Ball</Button>
+        <Button className="button" data-testid="foul-display" onClick={props.foul}>Foul</Button>
 
     </Buttons>
 )
