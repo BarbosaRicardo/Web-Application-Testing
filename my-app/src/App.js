@@ -18,21 +18,21 @@ function App() {
   const [balls, setBalls] = useState(0);
 
   //game logic for strike increase
-  const strikes = () => {
-    if(strikes == 2)
+  const strike = () => {
+    if(strikes === 2)
     {
-      setSrikes(0) // after the third strike reset strikes to 0
+      setStrikes(0) // after the third strike reset strikes to 0
       setBalls(0) // after the third strike reset balls to 0
     }
     else
     {
-      setStrike(strikes+1) // increment the number of strikes
+      setStrikes(strikes+1) // increment the number of strikes
     }
   }
 
   //game logic for ball increase 
-  const balls = () => {
-    if(balls == 3)
+  const ball = () => {
+    if(balls === 3)
     {
       setStrikes(0) // after the fourth ball reset strikes to 0
       setBalls(0) // after the fourth ball reset balls to 0
@@ -63,7 +63,7 @@ function App() {
   return (
     <div className="App">
       <Display strikes={strikes} balls={balls} />
-      <Dashboard balls={balls} strikes={strikes} foul={foul} hit={hit} />
+      <Dashboard ball={ball} strike={strike} foul={foul} hit={hit} />
     </div>
   );
 }
